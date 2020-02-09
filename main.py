@@ -3,14 +3,12 @@ from discord.ext import commands
 import random
 import json
 import re
+from config import emoji
 description = '''An example bot to showcase the discord.ext.commands extension
 module.
 There are a number of utility commands being showcased here.'''
 bot = commands.Bot(command_prefix='!', description=description)
 
-emoji_map: {
-    "PogChamp": "<:PogChamp:673744590670397493>"
-}
 
 @bot.command()
 async def roll(ctx,*, dice=None):
@@ -21,7 +19,7 @@ async def roll(ctx,*, dice=None):
         if roll == 1:
             result = f"F's in chat for {ctx.author.mention}. They rolled a 1."
         elif roll == 20:
-            result =  f"{emoji_map['PogChamp']} for {ctx.author.mention}. They rolled a nat 20!"
+            result =  f"{emoji.emojis['PogChamp']} for {ctx.author.mention}. They rolled a nat 20!"
         else:
             result = f"{ctx.author.mention} rolled 1d20: {roll}"
         await ctx.send(result)

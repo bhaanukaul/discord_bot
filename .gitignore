@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VSCode Files
+.vscode/
+
+# Bot Auth Config
+config/auth.json
