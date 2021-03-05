@@ -132,4 +132,4 @@ dmypy.json
 .vscode/
 
 # Bot Auth Config
-config/auth.py
+bot/config/auth.py
