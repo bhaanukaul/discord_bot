@@ -4,7 +4,7 @@ import random
 import json
 import re
 from bot_commands import dnd
-from config.auth import DISCORD_TOKEN
+from bot_commands.config.auth import DISCORD_TOKEN
 
 
 description = '''An example bot to showcase the discord.ext.commands extension
@@ -15,10 +15,10 @@ bot.load_extension("bot_commands.dnd.dnd")
 bot.load_extension("bot_commands.fun.fun")
 
 
-
 @bot.command()
-async def test_emoji(ctx):
-    await ctx.send("<:PogChamp:673744590670397493>")
+async def test_emoji(ctx, boopee=None):
+    await ctx.send(f"<:PogChamp:673744590670397493> {boopee}")
+    return
 
 
 @bot.event

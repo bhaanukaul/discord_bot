@@ -5,7 +5,7 @@ import json
 import re
 import requests
 from ..utils import emoji
-from ...config.auth import TENOR_TOKEN
+from ..config.auth import TENOR_TOKEN
 
 class Fun(commands.Cog):
     def __init__(self, bot):
@@ -20,9 +20,9 @@ class Fun(commands.Cog):
         gif_url = random_gif["media"][0]["mediumgif"]["url"]
         print(f"boopee: {boopee}")
         if boopee == None:
-            await ctx.send(f"::: {ctx.author.mention} is booping ... no one?\n{gif_url}\n:::")
+            await ctx.send(f":::\n{ctx.author.mention} is booping ... no one?\n{gif_url}\n:::")
         else:
-            await ctx.send(f"::: {ctx.author.mention} booped {boopee}?\n{gif_url}\n:::")
+            await ctx.send(f":::\n{ctx.author.mention} booped {boopee}?\n{gif_url}\n:::")
         return
 
 
